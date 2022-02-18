@@ -1,0 +1,101 @@
+// encapsulamento . Agrupar as váriavéis e funções dentro do objeto
+
+class Garrafa{
+	const(altura,largura,capacidade)
+	{
+		this.altura=altura;
+		this.largura=largura;
+		this.capacidade=capacidade;
+	}
+	abrir(){
+	}
+	fechar(){
+	}
+}
+
+
+//Abstração - datalhes que são escondidos -- mudar implemação refletir para outros objetos 
+
+public class Garrafa
+{
+	private int Total=0;
+	public int Altura{get;set}
+	public int Largura{get,set}
+	public int Capacidade{ get;set}
+	
+	public void Abrir(){
+	}
+	public void Fechar(){
+	}
+	
+	private void Encher(){
+		while(total<capacidade)
+			Total++;
+	}
+}
+
+
+//Herança , herda propriedades e métodos de outro objeto.
+// classe pai que trás todas as propriedades da filha 
+//tudo que a class dad faz a classe soon também faz
+// a classe herdeira tem a propriedade de fazer o que a dad faz mais alguns outras propriedade
+public class Dad{
+	
+}
+public class Soon : Dad {
+	
+}
+
+//Polimorfismo 
+//várias formas do mesmo objeto// utilidade especifica para atender x demanda.
+// forma diferente do mesmo métodos
+//diferente especifidade 
+
+public class Garrafa
+{
+	public virtual void Finalidade()
+	{
+		Console.WriteLine("Garrafa Genérica")
+	}
+}
+
+public class GarrafaTermica: Garrafa
+{
+	public override void Finalidade()
+	{
+		Console.WriteLine("Manter a temperatura")
+	}
+}
+public class GarrafaVidro: Garrafa
+{
+	public override void Finalidade()
+	{
+		Console.WriteLine("Manter o sabor");
+	}
+}
+public class : Garrafa
+{
+	public override void Finalidade()
+	{
+		Console.WriteLine("Armazenar Grandes quantidades");
+	}
+}
+
+
+
+
+public class Programacao { 
+}
+public class CSharp:Programacao{
+	public virtual void Codigo()
+	{
+		Console.WriteLine("Codar")
+	}
+}
+public class : Python
+{
+	public override void Codigo()
+	{
+		Console.WriteLine("CodigoMaisFacil");
+	}
+}
